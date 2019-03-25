@@ -1,0 +1,75 @@
+ol li ul li {
+    text-decoration: none;
+}
+.nav-bar-border{
+    border-style: solid;
+    border-left: 3px;
+
+    border-left-color: #000000;
+    border-right-color: #FFFFFF;
+}
+.btn-twitter {
+    color: #000000;
+    background-color: #55acee;
+    border-color: #000000;
+    box-shadow: 4px 4px 3px grey;
+}
+
+.btn-facebook {
+    color: #000000;
+    background-color: #3b5998;
+    border-color: #000000;
+    box-shadow: 4px 4px 3px grey;
+}
+
+.btn-instagram {
+    color: #000000;
+    background-color: #ded1c1;
+    border-color: #000000;
+    box-shadow: 4px 4px 3px grey;
+}
+
+.btn-etsy {
+    color: #000000;
+    background-color: #eb6d20;
+    border-color: #000000;
+    box-shadow: 4px 4px 3px grey;
+}
+
+.img-respons {
+    width: 100%;
+}
+
+.nav-bar-white {
+    background-color: #abcbea;
+}
+
+.header-large {
+    font-size: 50pt;
+}
+
+.footer-nav {
+    background-image: url(/photos/dust_scratches.png);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    border-style: solid;
+    border-left: 3px;
+
+    border-left-color: #000000;
+    border-right-color: #FFFFFF;
+}
+.jumbotron-tax{
+    background-color:#abcbea; 
+    color:#04080F; 
+}
+.nav-border-bottom
+{
+    border-style: solid;
+    border-bottom: 5px;
+    border-bottom-color: #000000;
+}
+.image-table
+{
+    height:250px;
+    width:250px;
+}
