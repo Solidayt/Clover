@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md bg-light navbar-light nav-border-bottom" style="background-image: url(/photos/dust_scratches.png)">
+<nav class="navbar navbar-expand-md bg-light navbar-light  body-font"
+  style="background-image: url(/photos/dust_scratches.png);">
   <a class="navbar-brand" href="index.php">Clover </a>
 
 
@@ -8,16 +9,18 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="faq.html" style="color:#000000;">FAQ</a>
+        <a class="nav-link" href="faq.php" style="color:#000000;">FAQ</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="products.php" id="navbardrop" data-toggle="dropdown" style="color:#000000;">
+        <a class="nav-link dropdown-toggle" href="products.php" id="navbardrop" data-toggle="dropdown"
+          style="color:#000000;">
           Products
         </a>
         <div class="dropdown-menu" style="color:#000000;">
-          <a class="dropdown-item" href="coaster-table.php">Coasters</a>
-          <a class="dropdown-item" href="car-table.php">Car Coasters</a>
-          <a class="dropdown-item" href="botanical-table.php">Botanical Coasters</a>
+          <a class="dropdown-item" href="http://thomassoliday.com/product-table.php?CategoryID=1 ">Coasters</a>
+          <a class="dropdown-item" href="http://thomassoliday.com/product-table.php?CategoryID=2 ">Car Coasters</a>
+          <a class="dropdown-item" href="http://thomassoliday.com/product-table.php?CategoryID=3">Large Car Coaster</a>
+          <a class="dropdown-item" href="http://thomassoliday.com/product-table.php?CategoryID=4 ">Botanical Coasters</a>
         </div>
       </li>
       <li class="nav-item">
@@ -32,4 +35,7 @@
     </ul>
 
   </div>
+  
 </nav>
+<div class=" container-fluid nav-border-bottom">
+  </div>

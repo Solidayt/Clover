@@ -13,7 +13,7 @@
 require_once("header.php");
 ?>
 
-<body style="background-image: url(/photos/dust_scratches.png)">
+<body style="background-image: url(/photos/dust_scratches.png)"  class="body-font">
 
     <header class="bg-light " style="background-image: url(/photos/dust_scratches.png)">
         <div class="container " style="text-align:center;">
@@ -27,11 +27,18 @@ require_once("header.php");
 
 
     <?php
-    if(isset($_SESSION['Email'])){
-    require_once("logout-header.php");
-    }else{  
-    require_once("login-header.php");
+    if($_SESSION['Email']== "thomas.soliday@gmail.com")
+    {
+        require_once("admin-nav-logout.php");
     }
+    else{
+        if(isset($_SESSION['Email'])){
+            require_once("logout-header.php");
+            }else{  
+            require_once("login-header.php");
+            }
+    }
+    
     ?>
 
 
@@ -107,9 +114,9 @@ require_once("header.php");
 
                     </div>
                     <div class="row">
-                        <div class="col"><img src="/photos/image002.jpg" class="img-respons"></div>
-                        <div class="col"><img src="/photos/leaf2.jpg" class="img-respons"></div>
-                        <div class="col"> <img src="/photos/carrooster.jpg" class="img-respons"></div>
+                        <div class="col"><a href="http://thomassoliday.com/product-table.php?CategoryID=4 "> <img src="/photos/image002.jpg"  class="img-respons"></a></div>
+                        <div class="col"><a href="http://thomassoliday.com/product-table.php?CategoryID=1 "><img src="/photos/leaf2.jpg"  class="img-respons"></a></div>
+                        <div class="col"><a href="http://thomassoliday.com/product-table.php?CategoryID=2 " > <img src="/photos/carrooster.jpg"  class="img-respons"></a></div>
                     </div>
                 </div>
             </div>
@@ -118,6 +125,6 @@ require_once("header.php");
     </div>
 </body>
 
-<?php include_once("template_footer.php");?>
+<?php include_once("footer.php");?>
 
 </html>

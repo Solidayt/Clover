@@ -10,8 +10,8 @@
 
 	// connect to database
 	  $servername = "capstone.c0lusijucnqw.us-east-2.rds.amazonaws.com";
-    $dbusername = "solidayt";
-    $dbpassword = "Maryhadadog11";
+    $dbusername = "web_app_user";
+    $dbpassword = "password";
     $dbname      =  "Capstone";
 
 // Create connection from the variables above 

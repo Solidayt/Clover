@@ -1,4 +1,4 @@
-<footer style="background-image: url(/photos/dust_scratches.png); padding-top:10px; padding-bottom: 25px;">
+<footer style="background-image: url(/photos/dust_scratches.png); padding-top:10px; padding-bottom: 25px;"  class="body-font">
   <div class="container-fluid footer-nav">
     <div class="container-fluid">
       <div class="row">
@@ -14,19 +14,22 @@
         <div class="col">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="indes.html">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="faq.php">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="coaster.html">Coasters</a>
+              <a class="nav-link" href="http://thomassoliday.com/product-table.php?CategoryID=1 ">Coasters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="car.html">Car Coasters</a>
+              <a class="nav-link" href="http://thomassoliday.com/product-table.php?CategoryID=2 "">Car Coasters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="leaf.html">Botanical Coasters</a>
+              <a class="nav-link" href="http://thomassoliday.com/product-table.php?CategoryID=3">Large Car Coasters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://thomassoliday.com/product-table.php?CategoryID=4 ">Botanical Coasters</a>
             </li>
           </ul>
         </div>
