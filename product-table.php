@@ -12,7 +12,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php  echo($_SESSION['Email']);
+<?php  //echo($_SESSION['Email']);
       error_reporting(0); 
     ?>
 

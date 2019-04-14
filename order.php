@@ -38,9 +38,9 @@ mysqli_query($db, $sqlInsert);
             //if the quantity in stock is 0 or 1 then throw error
         }
         //new quantity that will be updated
-        echo $tempQuantity;
+        //echo $tempQuantity;
         $newQuantity = $tempQuantity- $quantity;
-        echo $newQuantity;
+        //echo $newQuantity;
         $sqlUpdate = "UPDATE Products SET UnitsInStock= '$newQuantity' WHERE ProductID = '$product_id'";
         mysqli_query($db, $sqlUpdate);
 
@@ -57,7 +57,7 @@ mysqli_query($db, $sqlInsert);
                 $orderID= $row["OrderID"];
                
             }
-            echo $orderID;
+            //echo $orderID;
             $productPrice = "SELECT Product_UnitPrice FROM Products WHERE ProductID ='$product_id'";
             $getProductPrice = mysqli_query($db, $productPrice);
 
@@ -91,7 +91,7 @@ mysqli_query($db, $sqlInsert);
 <!DOCTYPE html>
 <html lang="en">
 <?php  
-    echo($_SESSION['Email']);
+    //echo($_SESSION['Email']);
     error_reporting(0); 
 ?>
 

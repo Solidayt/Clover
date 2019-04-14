@@ -1,6 +1,6 @@
 <?php  
 include('db-connect.php');
-echo($_SESSION['Email']);
+//echo($_SESSION['Email']);
 
       error_reporting(0); 
       $essay = mysqli_real_escape_string($db,$_POST['essay']);

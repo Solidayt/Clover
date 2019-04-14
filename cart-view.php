@@ -285,7 +285,7 @@ else
                             <input type="hidden" name="noDollar" value="<?php echo $noDollar_total; ?>">
 
                             <input type="submit" class="btn btn-primary btn-remove" name="button" id="button"
-                                value="Shipping Info!">
+                                value="Buy Now!">
 
                         </form>
 

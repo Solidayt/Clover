@@ -1,6 +1,6 @@
 <?php  
 include('db-connect.php');
-echo($_SESSION['Email']);
+//echo($_SESSION['Email']);
       error_reporting(0); 
     ?>
 <!DOCTYPE html>
@@ -25,11 +25,17 @@ require_once("header.php");
 
 
     <?php
-    if(isset($_SESSION['Email'])){
-    require_once("logout-header.php");
-    }else{  
-    require_once("login-header.php");
-    }
+     if($_SESSION['Email']== "thomas.soliday@gmail.com")
+     {
+         require_once("admin-nav-logout.php");
+     }
+     else{
+         if(isset($_SESSION['Email'])){
+             require_once("logout-header.php");
+             }else{  
+             require_once("login-header.php");
+             }
+     }
     ?>
 
 

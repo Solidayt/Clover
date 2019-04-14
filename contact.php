@@ -1,6 +1,6 @@
 <?php  
 include('db-connect.php');
-echo($_SESSION['Email']);
+//echo($_SESSION['Email']);
 
       error_reporting(0); 
 
@@ -29,11 +29,17 @@ require_once("header.php");
 
 
     <?php
-    if(isset($_SESSION['Email'])){
-    require_once("logout-header.php");
-    }else{  
-    require_once("login-header.php");
-    }
+     if($_SESSION['Email']== "thomas.soliday@gmail.com")
+     {
+         require_once("admin-nav-logout.php");
+     }
+     else{
+         if(isset($_SESSION['Email'])){
+             require_once("logout-header.php");
+             }else{  
+             require_once("login-header.php");
+             }
+     }
     ?>
 
     <br>
@@ -76,7 +82,7 @@ require_once("header.php");
                             <b>Please fill this form out and ask any questions.</b>
                         </label>
 
-                        <textarea class="form-control" rows="8"  autocomplete="off"  id="essay" name="essay" onkeypress="return check_length(this, document.getElementById('words'),500);">
+                        <textarea class="form-control" rows="8"  autocomplete="off"  id="essay" name="essay" onkeypress="return check_length(this, document.getElementById('words'),150);">
 		                    </textarea>
                         <p>You wrote <span id="words">0</span> words.&nbsp;</p>
                     </div>
