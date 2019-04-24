@@ -113,6 +113,7 @@ require_once("header.php");
                 <form action="admin-add-item.php" method="post">
 
                     <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <?php include('errors.php'); ?>
                         <label><b>Product ID:</b></label>
                         <input  autocomplete="off" class="form-control" placeholder="product id" id="prodID" name="prodID"
                             required>
