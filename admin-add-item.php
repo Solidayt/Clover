@@ -55,7 +55,9 @@ if(isset($_POST['add-item']))
             mysqli_query($db, $sql);
             header('location: admin-add-item.php');
 
-            echo
+            echo '<script language-"javascript">';
+            echo ' alert("Product has been added to the cart")';
+            echo ' </script>';
         }
 }
       //echo $email;
