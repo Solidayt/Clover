@@ -7,25 +7,61 @@ if($_SESSION['Email'] !="thomas.soliday@gmail.com"){
 
       error_reporting(0); 
 
-      error_reporting(0); 
+if(isset($_POST['add-item']))
+{
+          
       $prodID = mysqli_real_escape_string($db,$_POST['prodID']);
       //echo $essay;
       $prodName = mysqli_real_escape_string($db, $_POST['prodName']);
+
+      $description = mysqli_real_escape_string($db,$_POST['description']);
       //echo $fname;
       $catID = mysqli_real_escape_string($db,$_POST['catID']);
       //echo $lname;
       $price = mysqli_real_escape_string($db,$_POST['price']);
+      $price = preg_replace('/[^0-9]/', '', $price);
       //echo $tel;
       $quantity = mysqli_real_escape_string($db,$_POST['quantity']);
       $quantity = preg_replace('/[^0-9]/', '', $quantity);
 
       $pictureURL = mysqli_real_escape_string($db,$_POST['pictureURL']);
-      //echo $email;
-      date_default_timezone_set('EST');
-      $today = date("Y-m-d H:i:s");
-     $sql= "INSERT INTO Products (ProductID, ProductName, Description, CategoryID, Product_UnitPrice, UnitsInStock, ProductPicture) 
+
+       //checks that information fields are filled out (not empty)
+    if (empty($prodID)) { array_push($errors, "Product ID is required"); }
+    if (empty($prodName)) { array_push($errors, "Product Name is required"); }
+    if (empty($description)) { array_push($errors, "Description is required"); }
+    if (empty($catID)) { array_push($errors, "Category ID is required"); }
+    if (empty($price)) { array_push($errors, "Price is required"); }
+    if (empty($quantity)) { array_push($errors, "quantity is required"); }
+
+    //check if a product is already created with that ID
+    $productID_check="SELECT ProductID FROM Products WHERE ProductID = '$prodID'";
+    $result= mysqli_query($db, $productID_check);
+    $productID= mysqli_fetch_assoc($result);
+
+    if($productID)
+    {
+        if($productID['ProductID']===  $prodID)
+        {
+            array_push($errors, "Product ID already exists.");
+        }
+    }
+
+        //if the error count is 0 them proceed to addint it to the cart
+        if(count($errors) == 0)
+        {
+            $sql= "INSERT INTO Products (ProductID, ProductName, Description, CategoryID, Product_UnitPrice, UnitsInStock, ProductPicture) 
             VALUES ($prodID, '$prodName' , '$description', '$catID', '$price', '$quantity', '$pictureURL') ";
-     mysqli_query($db, $sql);
+            mysqli_query($db, $sql);
+            header('location: admin-add-item.php');
+
+            echo
+        }
+}
+      //echo $email;
+      //date_default_timezone_set('EST');
+      //$today = date("Y-m-d H:i:s");
+     
        
     ?>
 
@@ -86,6 +122,11 @@ require_once("header.php");
                             required>
                     </div>
 
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <label><b>Description:</b></label>
+                        <input  autocomplete="off" class="form-control" placeholder="Description" id="description" name="description" required>
+                    </div>
+
 
                     <div class="form-group col-lg-12 col-md-12 col-sm-12">
                         <label><b>Category ID:</b></label>
@@ -94,7 +135,7 @@ require_once("header.php");
 
                     <div class="form-group col-lg-12 col-md-12 col-sm-12">
                         <label><b>Price:</b></label>
-                        <input  autocomplete="off" class="form-control" placeholder="9.95" id="price" name="price">
+                        <input  autocomplete="off" class="form-control" placeholder="9.95" id="price" name="price" required>
                     </div>
 
                     <div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -111,7 +152,7 @@ require_once("header.php");
                    
                     
 
-                    <button type="submit" class="btn btn-success " action="send-email.php">Submit</button>
+                    <button type="submit" class="btn btn-success " name="add-item">Submit</button>
                     <button type="button" class="btn btn-dark " onclick="reload()">Reset</button>
                 </form>
 
